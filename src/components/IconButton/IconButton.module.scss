@@ -1,0 +1,36 @@
+.root {
+	flex: 0 0 auto;
+	padding: 5px;
+	overflow: visible;
+	border-radius: 0;
+	color: inherit;
+	text-align: center;
+
+	&:hover {
+		background-color: transparent;
+		color: rgba(63, 58, 58, 0.5);
+
+		&.disabled {
+			background-color: transparent;
+		}
+	}
+
+	&.disabled {
+		background-color: transparent;
+	}
+}
+
+.colorInherit {
+	color: inherit;
+
+	&:hover {
+		color: inherit;
+	}
+}
+
+.label {
+	display: flex;
+	align-items: inherit;
+	justify-content: inherit;
+	width: 100%;
+}

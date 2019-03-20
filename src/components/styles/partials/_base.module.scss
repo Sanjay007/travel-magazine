@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	overflow-x: hidden;
+	background-color: $color--body-background;
+	color: $color--body;
+}
+
+main {
+	flex: 1 0 auto;
+	min-height: 100vh;
+}
+
+figure {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $color--body;
+	font-family: $font-family--body;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+textarea {
+	resize: vertical;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 36px 0 12px;
+	clear: both;
+	font-family: $font-family--display;
+	font-weight: 700;
+
+	span {
+		display: inline-block;
+	}
+}
+
+a {
+	color: $color--body;
+	transition: color 0.4s 0.1s ease-out;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	outline: 0;
+}
+
+p {
+	margin: 0 0 24px;
+	padding: 0;
+}

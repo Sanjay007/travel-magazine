@@ -1,0 +1,116 @@
+// color to test 1280ab f28e24
+@import '../../components/styles/partials/colors.module';
+
+.featuredTitle {
+	font-size: 2em;
+	line-height: 1.2;
+	margin-top: 0;
+}
+
+.featuredBody {
+	font-size: 1.2em;
+	font-family: Montserrat;
+	line-height: 1.5;
+}
+.featuredMedia {
+	height: 400px;
+	width: 700px;
+	object-fit: cover;
+	box-shadow: 0px 20px 36px -13px #0000001c;
+	border-radius: 4px;
+}
+.latestTitle {
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+
+.bigMedia {
+	height: 470px;
+	object-fit: cover;
+	box-shadow: 0px 20px 36px -13px #0000001c;
+	border-radius: 4px;
+}
+.cardTitle {
+	color: $color--body-lighten;
+	display: inline-block;
+	line-height: 1.2;
+	margin-bottom: 0.75em;
+	text-decoration: none;
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		color: rgba($color--body-lighten, 0.7);
+		text-decoration: none;
+	}
+
+	.featured & {
+		font-size: 1.3em;
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: 0.75em;
+		text-decoration: none;
+	}
+
+	.latested & {
+		font-size: 1.1em;
+	}
+
+	.destinations & {
+		font-size: 1em;
+	}
+}
+.category {
+	margin-bottom: 5px;
+	margin-top: 50px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: $color--body-lighten;
+}
+
+.readMore {
+	color: $color--body-lighten;
+	&::before,
+	&::after {
+		background: $color--body-lighten;
+	}
+}
+
+.galleryItem {
+	position: relative;
+	flex: 1;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: flex 0.8s ease;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0.6;
+	}
+
+	&:nth-child(odd)::before {
+		background-image: linear-gradient(
+			to bottom,
+			rgba($color--indigo, 0.1),
+			rgba($color--indigo, 0.8)
+		);
+	}
+
+	&:nth-child(even)::before {
+		background-image: linear-gradient(
+			to bottom,
+			rgba($color--blue, 0.1),
+			rgba($color--blue, 0.8)
+		);
+	}
+
+	&:hover {
+		flex: 7;
+	}
+}

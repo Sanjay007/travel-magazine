@@ -1,0 +1,35 @@
+version: '3.5'
+
+services:
+    node:
+        container_name: trivago-app
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - '.:/usr/src/app'
+            - '/usr/src/app/node_modules'
+        ports:
+            - '3000:3000'
+        environment:
+            - NODE_ENV=development
+
+    storybook:
+        container_name: trivago-app-storybook
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: ['run', 'storybook']
+        volumes:
+            - '.:/usr/src/app'
+            - '/usr/src/app/node_modules'
+        ports:
+            - '9001:9001'
+
+    node-prod:
+        container_name: trivago-app-prod
+        build:
+            context: .
+            dockerfile: Dockerfile-prod
+        ports:
+            - '80:80'

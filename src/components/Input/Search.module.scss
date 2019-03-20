@@ -1,0 +1,79 @@
+@import '../styles/partials/colors.module';
+
+.label {
+	display: inline-block;
+	padding: 18px;
+	color: darken($color--tertiary, 90%);
+	cursor: pointer;
+	fill: none;
+}
+
+.magnifier {
+	height: 19px;
+	width: 19px;
+	stroke: var(--color-border);
+	transition: stroke 0.15s;
+}
+
+.wrapper {
+	display: inline-flex;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	background: transparent;
+	transition: background-color 0.15s ease-out;
+	height: 56px;
+
+	&:hover {
+		background-color: darken($color--tertiary, 1%);
+
+		& .magnifier {
+			stroke: $color--body;
+		}
+	}
+}
+
+/* Nesting is here to force overwriting the hidden styles */
+.wrapper .input {
+	border: none;
+	padding: 0;
+	box-shadow: none;
+	transition: 0.15s ease-out;
+	background: transparent;
+	outline: 0;
+
+	/* Hidden styles: 1px is because Safari cannot focus an input with a width of 0 */
+	width: 1px;
+	opacity: 0;
+}
+
+.wrapperOpen {
+	background-color: var(--color-white);
+	border-color: darken($color--tertiary, 1%);
+	box-shadow: 0 0 5px 0 color(var(--color-black) a(10%));
+
+	&:hover {
+		background-color: var(--color-white);
+	}
+
+	& .magnifier {
+		stroke: var(--color-black);
+	}
+
+	& .input {
+		opacity: 1;
+	}
+
+	&.wrapper--size-m .input {
+		width: 590px;
+	}
+
+	&.wrapper--size-s .input {
+		width: 300px;
+	}
+}
+
+.checkboxWrapper {
+	display: inline-block;
+	padding: 8px 10px;
+	font-weight: 300;
+}

@@ -1,0 +1,24 @@
+@import '../../components/styles/partials/colors.module';
+
+.bannerWraper {
+	position: relative;
+	text-align: center;
+
+	.media {
+		height: 40vh;
+		object-fit: cover;
+		background-position: center 30%;
+		margin-bottom: 2rem;
+	}
+
+	.bannerTitle {
+		position: absolute;
+		top: 40%;
+		text-transform: initial;
+		line-height: 1.3;
+		font-size: 2.2rem;
+		font-weight: 600;
+		margin-bottom: 2rem;
+		color: $color--body-lighten;
+	}
+}

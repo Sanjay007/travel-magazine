@@ -1,0 +1,25 @@
+@import '../styles/partials/mixins.module';
+
+.root {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+
+	@include up(xs) {
+		max-width: 540px;
+	}
+
+	@include up(sm) {
+		max-width: 720px;
+	}
+
+	@include up(md) {
+		max-width: 960px;
+	}
+
+	@include up(lg) {
+		max-width: 1280px;
+	}
+}

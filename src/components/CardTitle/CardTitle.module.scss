@@ -1,0 +1,14 @@
+@import '../styles/partials/colors.module';
+
+.root {
+	color: $color--body-lighten;
+	line-height: 1.2;
+	margin-bottom: 0.75em;
+	text-decoration: none;
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		color: rgba($color--body-lighten, 0.7);
+		text-decoration: none;
+	}
+}

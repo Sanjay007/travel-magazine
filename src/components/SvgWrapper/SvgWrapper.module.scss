@@ -1,0 +1,45 @@
+.root {
+	display: inline-block;
+	flex-shrink: 0;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	font-size: 24px;
+	user-select: none;
+}
+
+.colorPrimary {
+	color: pink;
+}
+
+.colorSecondary {
+	color: palegreen;
+}
+
+.colorError {
+	color: purple;
+}
+
+.colorDisabled {
+	color: darkgrey;
+}
+
+.colorOrange {
+	color: #f7a626;
+}
+
+.colorGrey {
+	color: #e0e1e2;
+}
+
+.fontSizeInherit {
+	font-size: inherit;
+}
+
+.fontSizeSmall {
+	font-size: 20px;
+}
+
+.fontSizeLarge {
+	font-size: 36px;
+}

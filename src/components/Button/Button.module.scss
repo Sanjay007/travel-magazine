@@ -1,0 +1,43 @@
+@import '../styles/partials/colors.module';
+
+.root {
+	border: 1px solid #20232a;
+	border-radius: 3px;
+	color: $color--secondary;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.2em;
+	padding: 10px;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	transition: background 0.3s, color 0.3s;
+
+	&:hover {
+		background: $color--primary;
+		color: #fff;
+		cursor: pointer;
+	}
+
+
+	&.colorPrimary {
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $color--primary;
+			color: $color--body-lighten;
+		}
+	}
+
+
+	&.colorSecondary {
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $color--secondary;
+			color: $color--body-lighten;
+		}
+	}
+}
